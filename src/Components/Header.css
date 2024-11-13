@@ -1,0 +1,56 @@
+/* Header.css */
+
+.app-container {
+    display: flex;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0); /* Show sidebar when visible */
+  }
+  
+  /* Main content styling */
+  .main-content {
+    margin-left: 0;
+    padding-top: 60px; /* Adjust to match header height */
+    transition: margin-left 0.3s ease;
+    width: 100%;
+  }
+  
+  .sidebar-visible .main-content {
+    margin-left: 250px; /* Adjust margin-left when sidebar is visible */
+  }
+  
+  /* Header styling */
+  .header {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toggle-sidebar-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  

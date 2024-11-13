@@ -12,27 +12,53 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* Sidebar CSS */
+.sidebar {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* background-color: #333; */
+  color: white;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px; /* Set an appropriate height for your header */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px; /* This should match the height of the header */
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  min-width: 200px;
+  height: calc(100vh - 60px); /* Full height minus the header height */
+  position: fixed;
+  top: 60px; /* Set the position just below the header */
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px; /* Match this to the sidebar width */
+  padding: 20px;
+  padding-top: 0; /* Ensures no extra space at the top */
 }
